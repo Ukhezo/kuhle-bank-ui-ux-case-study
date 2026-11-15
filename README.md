@@ -12,6 +12,7 @@ A mobile banking app designed for **first-time digital bankers in rural KwaZulu-
 | **Platform** | Android and iOS app, 390 × 844 screens |
 | **Tools** | Figma, HTML/CSS for the design source |
 | **Type** | Concept project: Kuhle Bank is a fictional bank |
+| **Figma** | [Design file and clickable prototype](https://www.figma.com/design/vgezsnnY4vQcGo2aKVJjET) |
 
 ---
 
