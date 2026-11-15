@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>Kuhle Bank case study</title><style>:root{--ink:#17153B;--primary:#4B32D9;--primary-700:#3722B0;--primary-50:#EEEBFF;--coral:#FF6B4A;--coral-50:#FFEDE8;--mint:#0E8A5F;--mint-50:#E1F5EC;--gold:#F5B83D;--gold-50:#FFF4DC;--danger:#C93838;--bg:#F7F6FB;--surface:#FFFFFF;--line:#E6E4EF;--muted:#625F78;}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;color:var(--ink);background:#D9D6E8;padding:40px;display:flex;flex-wrap:wrap;gap:60px;align-items:flex-start}
+svg{display:block;flex-shrink:0}
+
+.board{width:1440px;background:var(--surface);padding:88px 96px;display:flex;flex-direction:column;gap:48px}
+.eyebrow{font-size:16px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--primary)}
+.title{font-size:56px;font-weight:800;letter-spacing:-1.5px;line-height:1.05;max-width:1000px}
+.lead{font-size:22px;line-height:1.55;color:var(--muted);max-width:900px}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.grid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.grid4{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:20px}
+.card{background:var(--bg);border-radius:24px;padding:32px;display:flex;flex-direction:column;gap:14px}
+.card h3{font-size:22px;font-weight:700}
+.card p,.card li{font-size:17px;line-height:1.55;color:var(--muted)}
+.card ul{padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.ico{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center}
+.tag{display:inline-flex;font-size:13px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:6px 12px;border-radius:8px}
+.step{display:flex;flex-direction:column;gap:10px}
+.step .n{font-size:15px;font-weight:800;color:var(--primary)}
+.step b{font-size:20px}
+.step span{font-size:15px;line-height:1.5;color:var(--muted)}
+.node{border-radius:16px;padding:16px 18px;font-size:16px;font-weight:600;text-align:center;min-width:150px}
+.arrow{display:flex;align-items:center;color:var(--muted)}
+.wf{width:260px;height:540px;border:3px solid var(--ink);border-radius:36px;padding:28px 18px;display:flex;flex-direction:column;gap:12px;background:#fff}
+.wf i{display:block;background:#E3E1EC;border-radius:8px}
+.wf .t{background:#C9C6D8}
+.ann{display:flex;gap:12px;font-size:16px;line-height:1.5;color:var(--muted)}
+.ann b{color:var(--ink)}
+.num{width:28px;height:28px;border-radius:50%;background:var(--coral);color:#fff;font-size:14px;font-weight:800;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.sw{border-radius:18px;overflow:hidden;border:1px solid var(--line)}
+.sw div:first-child{height:110px}
+.sw div:last-child{padding:12px 14px;font-size:14px;line-height:1.45}
+.btn{height:56px;border-radius:16px;display:flex;align-items:center;justify-content:center;gap:10px;font-size:16px;font-weight:700;padding:0 28px}
+.toggle{width:52px;height:32px;border-radius:16px;background:var(--line);padding:3px;display:flex}
+.toggle i{width:26px;height:26px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(23,21,59,.25)}
+.toggle.on{background:var(--mint);justify-content:flex-end}
+
+.b{display:block}</style></head><body style="flex-direction:column"><section class="b" data-name="00 Cover">
+<div class="board" style="background:var(--ink);color:#fff;height:900px;position:relative;overflow:hidden;justify-content:space-between">
+  <div style="position:absolute;width:520px;height:520px;border-radius:50%;background:var(--primary);right:-120px;top:-140px"></div>
+  <div style="position:absolute;width:280px;height:280px;border-radius:50%;background:var(--coral);right:110px;top:300px"></div>
+  <div style="position:absolute;width:160px;height:160px;border-radius:50%;background:var(--gold);right:40px;top:520px"></div>
+  <div style="display:flex;align-items:center;gap:14px;position:relative"><div style="width:56px;height:56px;border-radius:17px;background:#fff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:31px">k</div><span style="font-weight:800;font-size:34px">kuhle</span></div>
+  <div style="position:relative;display:flex;flex-direction:column;gap:22px">
+    <div class="eyebrow" style="color:var(--gold)">UI/UX case study · Mobile banking</div>
+    <div class="title" style="font-size:76px;max-width:880px">Banking for first-time digital bankers in rural KwaZulu-Natal</div>
+  </div>
+  <div style="position:relative;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;border-top:1px solid rgba(255,255,255,.2);padding-top:28px">
+    <div><div style="opacity:.6;font-size:15px">Role</div><div style="font-size:20px;font-weight:600;margin-top:6px">UI/UX designer (solo)</div></div>
+    <div><div style="opacity:.6;font-size:15px">Tools</div><div style="font-size:20px;font-weight:600;margin-top:6px">Figma</div></div>
+    <div><div style="opacity:.6;font-size:15px">Platform</div><div style="font-size:20px;font-weight:600;margin-top:6px">Android and iOS app</div></div>
+    <div><div style="opacity:.6;font-size:15px">Type</div><div style="font-size:20px;font-weight:600;margin-top:6px">Concept project · fictional bank</div></div>
+  </div>
+</div>
+</section>
+<section class="b" data-name="01 Overview">
+<div class="board">
+  <div class="eyebrow">01 · Overview</div>
+  <div class="title">Most banking apps assume fast data, new phones and English.</div>
+  <div class="grid3">
+    <div class="card"><div class="ico" style="background:var(--coral-50);color:var(--coral)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 21h20zM12 10v4M12 18h.01"/></svg></div><h3>The problem</h3><p>People in towns like Greytown often run their money on cash, airtime and stokvels. Many banking apps feel risky and confusing, and they use a lot of mobile data.</p></div>
+    <div class="card"><div class="ico" style="background:var(--primary-50);color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5 9-10"/></svg></div><h3>The goal</h3><p>Design a banking app a first-time user can use with confidence to send money, buy airtime, track spending and save with a stokvel.</p></div>
+    <div class="card"><div class="ico" style="background:var(--gold-50);color:#8A5A00"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a16 16 0 0 1 20 0M5 12.5a11 11 0 0 1 14 0M8.5 16a6 6 0 0 1 7 0M12 20h.01"/></svg></div><h3>Constraints</h3><ul><li>Low data and slow networks</li><li>Entry-level Android phones</li><li>Four languages</li><li>High fear of scams</li></ul></div>
+  </div>
+  <div style="display:flex;flex-direction:column;gap:24px">
+    <div style="font-size:24px;font-weight:700">My process</div>
+    <div style="display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:20px;border-top:4px solid var(--ink);padding-top:22px">
+      <div class="step"><span class="n">01</span><b>Discover</b><span>Desk research on mobile banking in small towns: data costs, older phones, fraud.</span></div><div class="step"><span class="n">02</span><b>Define</b><span>Proto-persona, pain points and How Might We statements.</span></div><div class="step"><span class="n">03</span><b>Ideate</b><span>User flows and low-fidelity wireframes for the key tasks.</span></div><div class="step"><span class="n">04</span><b>Design</b><span>Design system, high-fidelity screens and a clickable prototype.</span></div><div class="step"><span class="n">05</span><b>Test</b><span>Usability test plan with five tasks and success measures.</span></div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="b" data-name="02 Proto-persona">
+<div class="board">
+  <div class="eyebrow">02 · Define</div>
+  <div class="title">Who we're designing for</div>
+  <div style="display:grid;grid-template-columns:420px minmax(0,1fr);gap:24px">
+    <div class="card" style="background:var(--primary);color:#fff;gap:18px">
+      <div style="width:120px;height:120px;border-radius:50%;background:#fff;color:var(--primary);display:flex;align-items:center;justify-content:center;font-size:42px;font-weight:800">TM</div>
+      <div><div style="font-size:32px;font-weight:800">Thandi Mkhize</div><div style="font-size:18px;opacity:.85;margin-top:4px">34 · Teacher's assistant · Greytown</div></div>
+      <div style="font-size:20px;line-height:1.5;font-style:italic;opacity:.95">"I send money to my gogo every month, but I'm scared I'll press the wrong thing and lose it."</div>
+      <span class="tag" style="background:rgba(255,255,255,.15);color:#fff;align-self:flex-start">Proto-persona · to be validated</span>
+    </div>
+    <div class="grid2">
+      <div class="card"><h3>Goals</h3><ul><li>Send money to family quickly and safely</li><li>Buy airtime and electricity without queues</li><li>See where her money goes each month</li><li>Keep paying into her stokvel</li></ul></div>
+      <div class="card"><h3>Frustrations</h3><ul><li>Apps eat her prepaid data</li><li>Hidden fees she only sees afterwards</li><li>Banking language is hard to follow</li><li>Scam SMSes make her distrust every message</li></ul></div>
+      <div class="card"><h3>Device and context</h3><ul><li>Entry-level Android phone, often low on storage</li><li>Prepaid data, mostly bought in small bundles</li><li>Speaks isiZulu at home and English at work</li></ul></div>
+      <div class="card" style="background:var(--gold-50)"><h3>How might we…</h3><ul><li>make every fee visible before she pays?</li><li>help her feel safe at the moment of sending?</li><li>keep the app useful on a slow, costly connection?</li><li>bring her stokvel into the app without losing trust?</li></ul></div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="b" data-name="03 User flow">
+<div class="board">
+  <div class="eyebrow">03 · Ideate</div>
+  <div class="title">User flow: sending money to family</div>
+  <p class="lead">The most important task. I kept it to five steps, put fees and a safety check before the money moves, and made proof of payment easy to share.</p>
+  <div style="display:flex;align-items:center;gap:14px;flex-wrap:nowrap">
+    <div class="node" style="background:var(--bg);color:var(--ink);">Home</div><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div><div class="node" style="background:var(--bg);color:var(--ink);">Tap Send</div><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div><div class="node" style="background:var(--primary-50);color:var(--primary);">Choose recipient</div><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div><div class="node" style="background:var(--primary-50);color:var(--primary);">Enter amount</div><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div>
+    <div class="node" style="background:var(--gold-50);color:#6B4A00;transform:none;border:2px dashed #C99A2E">Enough money?</div><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div><div class="node" style="background:var(--primary-50);color:var(--primary);">Check details<br>and fee</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px">
+    <div class="card" style="gap:16px">
+      <div style="font-weight:700;font-size:18px;color:var(--mint)">If yes</div>
+      <div style="display:flex;align-items:center;gap:14px"><div class="node" style="background:var(--primary);color:#fff;">Confirm with PIN</div><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div><div class="node" style="background:var(--mint-50);color:var(--mint);">Money sent</div><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div><div class="node" style="background:var(--bg);color:var(--ink);border:1px solid var(--line);background:#fff">Share proof</div></div>
+    </div>
+    <div class="card" style="gap:16px">
+      <div style="font-weight:700;font-size:18px;color:var(--danger)">If no</div>
+      <div style="display:flex;align-items:center;gap:14px"><div class="node" style="background:var(--coral-50);color:#9A2E16;">Friendly message<br>with balance</div><div class="arrow"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M14 6l6 6-6 6"/></svg></div><div class="node" style="background:var(--primary-50);color:var(--primary);">Change amount</div></div>
+    </div>
+  </div>
+  <div class="grid3">
+    <div class="ann"><span class="num">1</span><span><b>Recent recipients first.</b> Most people send to the same few family members.</span></div>
+    <div class="ann"><span class="num">2</span><span><b>Fee shown while typing.</b> No surprise costs after the money has moved.</span></div>
+    <div class="ann"><span class="num">3</span><span><b>Safety reminder at the risky moment,</b> not hidden in settings.</span></div>
+  </div>
+</div>
+</section>
+<section class="b" data-name="04 Wireframes">
+<div class="board">
+  <div class="eyebrow">04 · Wireframes</div>
+  <div class="title">Low-fidelity first: structure before style</div>
+  <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;align-items:start">
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:center"><div class="wf"><i class="t" style="height:18px;width:60%"></i><i class="" style="height:120px;background:#B9B4D6"></i><i class="" style="height:56px;"></i><i class="" style="height:24px;width:80%"></i><i class="t" style="height:18px;width:45%"></i><i class="" style="height:52px;"></i><i class="" style="height:52px;"></i><i class="" style="height:52px;"></i><i class="" style="height:40px;margin-top:auto"></i></div><div class="ann"><span class="num">A</span><span><b>Home.</b> Balance card at the top, four big actions, then recent activity. Everything most people need without scrolling.</span></div></div>
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:center"><div class="wf"><i class="t" style="height:30px;width:55%"></i><i class="" style="height:60px;width:60%;align-self:center;background:#B9B4D6"></i><i class="" style="height:32px;"></i><i class="" style="height:40px;"></i><i class="" style="height:24px;"></i><i class="" style="height:170px;"></i><i class="" style="height:48px;background:#B9B4D6;margin-top:auto"></i></div><div class="ann"><span class="num">B</span><span><b>Amount.</b> A large number and quick-amount chips. A built-in keypad means no jumping system keyboard.</span></div></div>
+    <div style="display:flex;flex-direction:column;gap:20px;align-items:center"><div class="wf"><i class="t" style="height:30px;width:70%"></i><i class="" style="height:60px;width:60px;border-radius:50%;align-self:center"></i><i class="" style="height:40px;width:60%;align-self:center;background:#B9B4D6"></i><i class="" style="height:170px;"></i><i class="" style="height:56px;background:#F3E2B5"></i><i class="" style="height:48px;background:#B9B4D6;margin-top:auto"></i><i class="" style="height:24px;width:50%;align-self:center"></i></div><div class="ann"><span class="num">C</span><span><b>Confirm.</b> One clear summary, the fee, a safety note and a single primary button.</span></div></div>
+  </div>
+</div>
+</section>
+<section class="b" data-name="05 Design system">
+<div class="board">
+  <div class="eyebrow">05 · Design system</div>
+  <div class="title">Friendly, high-contrast and easy to tap</div>
+  <div style="display:flex;flex-direction:column;gap:20px"><div style="font-size:22px;font-weight:700">Colour</div><div class="grid4"><div class="sw"><div style="background:#4B32D9"></div><div><b>Kuhle Violet</b><br><span style="color:var(--muted)">#4B32D9 · Primary actions, brand</span></div></div><div class="sw"><div style="background:#17153B"></div><div><b>Ink</b><br><span style="color:var(--muted)">#17153B · Text, dark surfaces</span></div></div><div class="sw"><div style="background:#FF6B4A"></div><div><b>Coral</b><br><span style="color:var(--muted)">#FF6B4A · Accent, spending</span></div></div><div class="sw"><div style="background:#0E8A5F"></div><div><b>Mint</b><br><span style="color:var(--muted)">#0E8A5F · Success, money in</span></div></div><div class="sw"><div style="background:#F5B83D"></div><div><b>Gold</b><br><span style="color:var(--muted)">#F5B83D · Warnings, safety notes</span></div></div><div class="sw"><div style="background:#C93838"></div><div><b>Red</b><br><span style="color:var(--muted)">#C93838 · Destructive actions</span></div></div><div class="sw"><div style="background:#F7F6FB"></div><div><b>Mist</b><br><span style="color:var(--muted)">#F7F6FB · App background</span></div></div><div class="sw"><div style="background:#E6E4EF"></div><div><b>Line</b><br><span style="color:var(--muted)">#E6E4EF · Borders, dividers</span></div></div></div></div>
+  <div class="grid2" style="gap:48px">
+    <div style="display:flex;flex-direction:column;gap:12px"><div style="font-size:22px;font-weight:700">Type · Inter</div><div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid var(--line);padding:10px 0"><span style="width:110px;font-size:14px;color:var(--muted)">Display<br>36/800</span><span style="font-size:36px;font-weight:800">R4 285.60</span></div><div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid var(--line);padding:10px 0"><span style="width:110px;font-size:14px;color:var(--muted)">Title<br>24/700</span><span style="font-size:24px;font-weight:700">Send money</span></div><div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid var(--line);padding:10px 0"><span style="width:110px;font-size:14px;color:var(--muted)">Heading<br>18/700</span><span style="font-size:18px;font-weight:700">Recent activity</span></div><div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid var(--line);padding:10px 0"><span style="width:110px;font-size:14px;color:var(--muted)">Body<br>16/400</span><span style="font-size:16px;font-weight:400">Kuhle to Kuhle is free</span></div><div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid var(--line);padding:10px 0"><span style="width:110px;font-size:14px;color:var(--muted)">Label<br>14/600</span><span style="font-size:14px;font-weight:600">Available balance</span></div><div style="display:flex;align-items:baseline;gap:24px;border-bottom:1px solid var(--line);padding:10px 0"><span style="width:110px;font-size:14px;color:var(--muted)">Caption<br>12/500</span><span style="font-size:12px;font-weight:500">Groceries · Today</span></div></div>
+    <div style="display:flex;flex-direction:column;gap:20px">
+      <div style="font-size:22px;font-weight:700">Components</div>
+      <div style="display:flex;gap:14px;flex-wrap:wrap">
+        <div class="btn" style="background:var(--primary);color:#fff">Primary</div>
+        <div class="btn" style="border:1.5px solid var(--primary);color:var(--primary)">Secondary</div>
+        <div class="btn" style="color:var(--primary)">Text</div>
+        <div class="btn" style="color:var(--danger)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3L2 21h20zM12 10v4M12 18h.01"/></svg> Destructive</div>
+      </div>
+      <div style="height:52px;border-radius:16px;border:1px solid var(--line);display:flex;align-items:center;gap:10px;padding:0 16px;font-size:15px;color:var(--muted)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 18a7 7 0 1 0 0-14a7 7 0 0 0 0 14zM21 21l-4.3-4.3"/></svg> Search input · 52 px high</div>
+      <div style="display:flex;gap:10px;align-items:center">
+        <div style="height:40px;padding:0 16px;border-radius:12px;background:var(--primary-50);border:1px solid var(--primary);color:var(--primary);display:flex;align-items:center;font-weight:600">Chip on</div>
+        <div style="height:40px;padding:0 16px;border-radius:12px;border:1px solid var(--line);display:flex;align-items:center;font-weight:600">Chip off</div>
+        <div class="toggle on"><i></i></div><div class="toggle"><i></i></div>
+      </div>
+      <div style="font-size:22px;font-weight:700;margin-top:8px">Icons · 24 px, 2 px stroke</div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap"><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 2h8a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2zM11 18h2"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h18v10H3zM12 14a2 2 0 1 0 0-4a2 2 0 0 0 0 4z"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V12M10 20V5M16 20v-9M2 20h20"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6h20v12H2zM2 10h20M6 15h4"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM2 21a7 7 0 0 1 14 0M16 3.5a4 4 0 0 1 0 7M22 21a7 7 0 0 0-4-6.3"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10 21h4"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11h14v10H5zM8 11V7a4 4 0 0 1 8 0v4"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM9 12l2 2 4-4"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a16 16 0 0 1 20 0M5 12.5a11 11 0 0 1 14 0M8.5 16a6 6 0 0 1 7 0M12 20h.01"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M4.9 7l14.2 10M19.1 7L4.9 17"/></svg></div><div style="width:56px;height:56px;border-radius:16px;background:var(--bg);display:flex;align-items:center;justify-content:center;color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8h16v-8M12 3v13M7 8l5-5 5 5"/></svg></div></div>
+      <div style="font-size:15px;color:var(--muted)">Spacing: 4 px base · 20 px screen margins · radius 12 / 16 / 24 px · minimum touch target 44 × 44 px</div>
+    </div>
+  </div>
+</div>
+</section>
+<section class="b" data-name="06 UX decisions and testing">
+<div class="board">
+  <div class="eyebrow">06 · Key decisions</div>
+  <div class="title">Designed around trust, data and language</div>
+  <div class="grid3"><div class="card"><div class="ico" style="background:var(--mint-50);color:var(--mint)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9a16 16 0 0 1 20 0M5 12.5a11 11 0 0 1 14 0M8.5 16a6 6 0 0 1 7 0M12 20h.01"/></svg></div><h3>Lite mode</h3><p>Turns off images and animations to save data. It's on by default for prepaid users.</p></div><div class="card"><div class="ico" style="background:var(--primary-50);color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22a10 10 0 1 0 0-20a10 10 0 0 0 0 20zM2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></div><h3>Four languages</h3><p>English, isiZulu, isiXhosa and Afrikaans, chosen on the very first screen.</p></div><div class="card"><div class="ico" style="background:var(--gold-50);color:#8A5A00"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2zM9 8h6M9 12h6"/></svg></div><h3>Fees up front</h3><p>Every fee shows before you confirm, written in plain words ("No fee: Kuhle to Kuhle is free").</p></div><div class="card"><div class="ico" style="background:var(--coral-50);color:#B23A1E"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6zM9 12l2 2 4-4"/></svg></div><h3>Safety at the right moment</h3><p>A scam warning appears on the confirm screen, exactly when it matters.</p></div><div class="card"><div class="ico" style="background:var(--primary-50);color:var(--primary)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12zM12 15a3 3 0 1 0 0-6a3 3 0 0 0 0 6z"/></svg></div><h3>Hide balance</h3><p>One tap hides the balance for privacy in taxis and queues.</p></div><div class="card"><div class="ico" style="background:var(--mint-50);color:var(--mint)"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11a4 4 0 1 0 0-8a4 4 0 0 0 0 8zM2 21a7 7 0 0 1 14 0M16 3.5a4 4 0 0 1 0 7M22 21a7 7 0 0 0-4-6.3"/></svg></div><h3>Stokvel built in</h3><p>A shared pot everyone can see. That openness builds the trust stokvels depend on.</p></div></div>
+  <div class="grid2" style="gap:24px">
+    <div class="card" style="background:var(--ink);color:#fff"><h3 style="color:#fff">Accessibility checklist</h3><ul style="color:#CFCDE0"><li style="color:#CFCDE0">Text contrast of at least 4.5:1 (WCAG AA)</li><li style="color:#CFCDE0">Touch targets of 44 × 44 px or larger</li><li style="color:#CFCDE0">Colour is never the only signal: icons and labels too</li><li style="color:#CFCDE0">Large 56 px buttons and a built-in number pad</li><li style="color:#CFCDE0">Works with screen readers: every icon has a label</li></ul></div>
+    <div class="card"><h3>Usability test plan (next step)</h3><p>5 participants from Umvoti · moderated, in person · think-aloud</p><ul><li>Send R350 to a saved family member</li><li>Buy R29 of airtime</li><li>Find how much you spent on transport</li><li>Freeze your card</li><li>Check when your stokvel pays out</li></ul><p><b style="color:var(--ink)">Measure:</b> task success, time on task, errors and confidence (1–5).</p></div>
+  </div>
+  <div style="font-size:15px;color:var(--muted);border-top:1px solid var(--line);padding-top:20px">Kuhle Bank is a fictional bank created for a portfolio project. Names, amounts and the persona are illustrative, not real customer data.</div>
+</div>
+</section></body></html>
